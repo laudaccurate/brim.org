@@ -8,7 +8,7 @@ import {
   Group,
 } from "@mantine/core";
 import { BrandTwitter, BrandYoutube, BrandInstagram } from "tabler-icons-react";
-import Logo from "../public/brim_png.png";
+import Logo from "../public/images/brim_logo.png";
 
 const useStyles = createStyles((theme) => ({
   footer: {

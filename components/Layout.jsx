@@ -1,7 +1,7 @@
 import Head from "next/head";
 import PropTypes from "prop-types";
 import { FooterLinks } from "../components/Footer";
-import { HeaderAction } from "../components/Header";
+import AppHeader from "./AppHeader";
 
 export default function Layout({ pageTitle, children }) {
   return (
@@ -13,7 +13,7 @@ export default function Layout({ pageTitle, children }) {
       </Head>
 
       <main>
-        <HeaderAction />
+        <AppHeader />
         {children}
       </main>
 

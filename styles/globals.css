@@ -1,4 +1,4 @@
-html,
+/* html,
 body {
   padding: 0;
   margin: 0;
@@ -13,4 +13,35 @@ a {
 
 * {
   box-sizing: border-box;
+} */
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+::-webkit-scrollbar {
+  @apply w-3;
+  @apply bg-transparent;
 }
+
+::-webkit-scrollbar-track {
+  @apply bg-slate-100 border-t-8;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-gray-300    rounded-full;
+}
+::-webkit-scrollbar-thumb:hover {
+  @apply bg-gray-500/40;
+}
+
+/* -----------------anchor ---------- */
+a.menu-link {
+  @apply hover:no-underline;
+}
+
+/* ----------------- Disable Number Arrows ------------------  */
+input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}
+

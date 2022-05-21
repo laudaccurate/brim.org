@@ -179,12 +179,12 @@ const data = [
   },
 ];
 
-export function FooterLinks() {
+export default function FooterLinks() {
   const { classes } = useStyles();
   const groups = data.map((group) => {
     const links = group.links.map((link, index) => (
       <Text
-        key={index}
+        key={link.label}
         className={classes.link}
         component="a"
         href={link.link}

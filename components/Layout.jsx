@@ -1,6 +1,6 @@
 import Head from "next/head";
 import PropTypes from "prop-types";
-import { FooterLinks } from "../components/Footer";
+import FooterLinks from "./Footer";
 import AppHeader from "./AppHeader";
 
 export default function Layout({ pageTitle, children }) {

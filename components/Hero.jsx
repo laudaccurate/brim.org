@@ -69,7 +69,7 @@ const useStyles = createStyles((theme) => ({
   },
 }));
 
-export function Hero() {
+export default function Hero() {
   const { classes } = useStyles();
 
   return (

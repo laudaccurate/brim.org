@@ -98,7 +98,7 @@ export default function AppHeader() {
 
   return (
     <Header>
-      <div className="px-50 ">
+      <div className="px-14">
         <div style={{ paddingBottom: 5 }}>
           <div className={classes.inner}>
             <Link href="/" passHref>

@@ -72,7 +72,7 @@ const links = [
 
 export default function AppHeader() {
   const router = useRouter();
-  const [opened, toggleOpened] = useDisclosure(false);
+  const [opened, handlers] = useDisclosure(false);
   const { classes } = useStyles();
 
   const items = links.map((link) => (
@@ -102,7 +102,7 @@ export default function AppHeader() {
 
   return (
     <Header>
-      <div className="px-14">
+      <div className="px-2">
         <div style={{ paddingBottom: 5 }}>
           <div className={classes.inner}>
             <Link href="/" passHref>
@@ -115,7 +115,7 @@ export default function AppHeader() {
             </Group>
             <Burger
               opened={opened}
-              onClick={() => toggleOpened()}
+              onClick={() => handlers.toggle()}
               className={classes.burger}
               size="sm"
             />

@@ -31,7 +31,7 @@ const useStyles = createStyles((theme) => ({
   },
 }));
 
-function Card({ image, title, category }) {
+function Card({ image, title, category, quote }) {
   const { classes } = useStyles();
 
   return (
@@ -46,14 +46,19 @@ function Card({ image, title, category }) {
     >
       <div>
         <Text className={classes.category} size="xs">
-          {category}
+          {quote}
         </Text>
-        <Title order={3} className={classes.title}>
-          {title}
-        </Title>
+        <div className="lg:max-w-xl">
+          <Title
+            order={3}
+            className="mix-blend-difference font-bold text-white text-[32px] lg:text-[45px] mt-6 leading-10 lg:leading-[50px]"
+          >
+            {title}
+          </Title>
+        </div>
       </div>
       <Button variant="white" color="dark">
-        View Gallery
+        {category}
       </Button>
     </Paper>
   );
@@ -63,32 +68,42 @@ Card.propTypes = {
   title: PropTypes.string.isRequired,
   image: PropTypes.string.isRequired,
   category: PropTypes.string.isRequired,
+  quote: PropTypes.string.isRequired,
 };
 
 const data = [
   {
     image: "./images/banner_2.webp",
-    title: "What a blessing",
+    title:
+      "So I will bless you as long as I live; in your name I will lift up my hands.",
+    quote: "Psalm 6:4",
     category: "Prayer Palace, UK",
   },
   {
     image: "./images/banner_4.webp",
-    title: "God loves you too",
+    title:
+      "Praise Him with timbrel and dancing;Praise Him with stringed instruments and pipe.",
+    quote: "Psalm 150:4",
     category: "Prayer Palace, UK",
   },
   {
     image: "./images/banner_5.webp",
-    title: "God loves us",
+    title: "How good and pleasant it is when brothers live together in unity!",
+    quote: "Psalm 133 1",
     category: "Prayer Palace, UK",
   },
   {
     image: "./images/banner_6.webp",
-    title: "God loves us",
+    title:
+      "Praise Him with timbrel and dancing;Praise Him with stringed instruments and pipe.",
+    quote: "Psalm 150:4",
     category: "Prayer Palace, UK",
   },
   {
     image: "./images/banner-4.webp",
-    title: "God loves us",
+    title:
+      "Let the little children come to me, and do not hinder them, for the kingdom of heaven belongs to such as these.",
+    quote: "Matthew 19:14",
     category: "Prayer Palace, UK",
   },
 ];

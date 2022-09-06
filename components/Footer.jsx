@@ -7,7 +7,12 @@ import {
   ActionIcon,
   Group,
 } from "@mantine/core";
-import { BrandTwitter, BrandYoutube, BrandInstagram } from "tabler-icons-react";
+import {
+  BrandTwitter,
+  BrandYoutube,
+  BrandInstagram,
+  BrandFacebook,
+} from "tabler-icons-react";
 import Logo from "../public/images/brim_logo.png";
 
 const useStyles = createStyles((theme) => ({
@@ -118,62 +123,62 @@ const data = [
     title: "About",
     links: [
       {
-        label: "Features",
-        link: "#",
+        label: "History",
+        link: "/history",
       },
       {
-        label: "Pricing",
-        link: "#",
+        label: "Ministries",
+        link: "/ministries",
       },
       {
-        label: "Support",
-        link: "#",
+        label: "Branches",
+        link: "/branches",
       },
       {
-        label: "Forums",
-        link: "#",
-      },
-    ],
-  },
-  {
-    title: "Project",
-    links: [
-      {
-        label: "Contribute",
-        link: "#",
-      },
-      {
-        label: "Media assets",
-        link: "#",
-      },
-      {
-        label: "Changelog",
-        link: "#",
-      },
-      {
-        label: "Releases",
-        link: "#",
+        label: "Pastors",
+        link: "/pastors",
       },
     ],
   },
   {
-    title: "Community",
+    title: "Resources",
     links: [
       {
-        label: "Join Discord",
-        link: "#",
+        label: "Sermons",
+        link: "/sermons",
       },
       {
-        label: "Follow on Twitter",
-        link: "#",
+        label: "Blog",
+        link: "/blog",
       },
       {
-        label: "Email newsletter",
-        link: "#",
+        label: "News",
+        link: "/news",
       },
       {
-        label: "GitHub discussions",
-        link: "#",
+        label: "Gallery",
+        link: "/gallery",
+      },
+    ],
+  },
+  {
+    title: "Contact",
+    links: [
+      {
+        label: "Contacts",
+        link: "/contact",
+      },
+      {
+        label: "Maps",
+        link: "/maps",
+      },
+      {
+        label: "Cells",
+        link: "/cells",
+      },
+      {
+        label: "Social Media",
+        link: "/socials",
       },
     ],
   },
@@ -214,18 +219,21 @@ export default function FooterLinks() {
       </Container>
       <Container className={classes.afterFooter}>
         <Text color="dimmed" size="sm">
-          © 2020 brim.org. All rights reserved.
+          © {new Date().getFullYear()} brim.org. All rights reserved.
         </Text>
 
         <Group spacing={0} className={classes.social} position="right" noWrap>
           <ActionIcon size="lg">
+            <BrandFacebook size={18} />
+          </ActionIcon>
+          <ActionIcon size="lg">
             <BrandTwitter size={18} />
           </ActionIcon>
           <ActionIcon size="lg">
-            <BrandYoutube size={18} />
+            <BrandInstagram size={18} />
           </ActionIcon>
           <ActionIcon size="lg">
-            <BrandInstagram size={18} />
+            <BrandYoutube size={18} />
           </ActionIcon>
         </Group>
       </Container>

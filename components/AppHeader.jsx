@@ -7,6 +7,7 @@ import {
   Burger,
   // Container,
 } from "@mantine/core";
+import { Home } from "tabler-icons-react";
 import { useDisclosure } from "@mantine/hooks";
 import Image from "next/image";
 import Link from "next/link";
@@ -38,23 +39,28 @@ const links = [
   {
     link: "/",
     label: "Home",
+    icon: <Home size={16} />,
   },
 
   {
     link: "/about",
     label: "About",
+    icon: <Home size={16} />,
   },
   {
     link: "/ministries",
     label: "Ministries",
+    icon: <Home size={16} />,
   },
   {
     link: "/library",
-    label: "login",
+    label: "Library",
+    icon: <Home size={16} />,
   },
   {
     link: "/contact",
     label: "Contact",
+    icon: <Home size={16} />,
   },
 ];
 

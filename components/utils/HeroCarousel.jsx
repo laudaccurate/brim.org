@@ -51,13 +51,13 @@ function Card({ image, title, category, quote }) {
         <div className="lg:max-w-xl">
           <Title
             order={3}
-            className="mix-blend-difference font-bold text-white text-[32px] lg:text-[45px] mt-6 leading-10 lg:leading-[50px]"
+            className="mix-blend-difference font-bold text-white text-[32px] lg:text-[45px] mt-7 lg:mt-12 leading-10 lg:leading-[50px]"
           >
             {title}
           </Title>
         </div>
       </div>
-      <Button variant="white" color="dark">
+      <Button variant="white" color="dark" className="mb-3">
         {category}
       </Button>
     </Paper>

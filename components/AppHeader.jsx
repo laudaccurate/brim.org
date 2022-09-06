@@ -10,6 +10,7 @@ import {
 import { useDisclosure } from "@mantine/hooks";
 import Image from "next/image";
 import Link from "next/link";
+import { useRouter } from "next/router";
 import logo from "../public/images/brim_logo.png";
 
 const useStyles = createStyles((theme) => ({
@@ -31,28 +32,6 @@ const useStyles = createStyles((theme) => ({
       display: "none",
     },
   },
-
-  link: {
-    [theme.fn.smallerThan("md")]: {
-      padding: "0.7rem 1rem",
-    },
-    textTransform: "uppercase",
-    display: "block",
-    lineHeight: 1,
-    padding: "8px 12px",
-    borderRadius: theme.radius.sm,
-    textDecoration: "none",
-    color: theme.colors.gray[7],
-    fontSize: theme.fontSizes.sm,
-    fontWeight: 500,
-    "&:hover": {
-      backgroundColor: theme.colors.gray[0],
-    },
-  },
-
-  linkLabel: {
-    marginRight: 5,
-  },
 }));
 
 const links = [
@@ -62,24 +41,25 @@ const links = [
   },
 
   {
-    link: "/registered-numbers",
-    label: "Registered Numbers",
+    link: "/about",
+    label: "About",
   },
   {
-    link: "/register",
-    label: "register",
+    link: "/ministries",
+    label: "Ministries",
   },
   {
-    link: "/login",
+    link: "/library",
     label: "login",
   },
   {
     link: "/contact",
-    label: "Contact Us",
+    label: "Contact",
   },
 ];
 
 export default function AppHeader() {
+  const router = useRouter();
   const [opened, toggleOpened] = useDisclosure(false);
   const { classes } = useStyles();
 
@@ -88,7 +68,11 @@ export default function AppHeader() {
       <a
         key={link.label}
         href={link.link}
-        className={classes.link}
+        className={`${
+          link.link === router.pathname && "bg-primary"
+        } px-4 py-3 hover:bg-gray-200 rounded-md leading-3 uppercase block ${
+          link.link === router.pathname ? "text-white" : "text-gray-500"
+        }  no-underline font-semibold`}
         // onClick={(event) => event.preventDefault()}
       >
         {link.label}

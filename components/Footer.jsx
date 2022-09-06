@@ -182,7 +182,7 @@ const data = [
 export default function FooterLinks() {
   const { classes } = useStyles();
   const groups = data.map((group) => {
-    const links = group.links.map((link, index) => (
+    const links = group.links.map((link) => (
       <Text
         key={link.label}
         className={classes.link}

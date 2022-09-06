@@ -7,7 +7,7 @@ import {
   Burger,
   // Container,
 } from "@mantine/core";
-import { useBooleanToggle } from "@mantine/hooks";
+import { useDisclosure } from "@mantine/hooks";
 import Image from "next/image";
 import Link from "next/link";
 import logo from "../public/images/brim_logo.png";
@@ -80,7 +80,7 @@ const links = [
 ];
 
 export default function AppHeader() {
-  const [opened, toggleOpened] = useBooleanToggle(false);
+  const [opened, toggleOpened] = useDisclosure(false);
   const { classes } = useStyles();
 
   const items = links.map((link) => (

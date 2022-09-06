@@ -1,3 +1,4 @@
+/* eslint-disable react/react-in-jsx-scope */
 import Head from "next/head";
 import PropTypes from "prop-types";
 import FooterLinks from "./Footer";
@@ -9,7 +10,7 @@ export default function Layout({ pageTitle, children }) {
       <Head>
         <title>{`BRIM | ${pageTitle}`}</title>
         <meta name="BRIM.org" content="BRIM.org" />
-        <link rel="icon" href="/images/brim_png.png" />
+        <link rel="icon" href="./images/brim_png.png" />
       </Head>
 
       <main>

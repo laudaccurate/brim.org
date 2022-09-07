@@ -1,7 +1,15 @@
 /* eslint-disable react/react-in-jsx-scope */
 import PropTypes from "prop-types";
-import { createStyles, Card, Image, Text, Group, Title } from "@mantine/core";
-import { CalendarEvent, MapPin } from "tabler-icons-react";
+import {
+  createStyles,
+  Card,
+  Image,
+  Text,
+  Group,
+  Title,
+  Button,
+} from "@mantine/core";
+import { CalendarEvent, MapPin, ExternalLink } from "tabler-icons-react";
 
 const useStyles = createStyles((theme) => ({
   card: {
@@ -100,6 +108,16 @@ export default function Events() {
       <Title className="text-center mb-4">Upcoming Events</Title>
       <div className="flex flex-col lg:flex-row justify-evenly py-6 px-3 lg:px-14 lg:space-x-14 space-y-6 lg:space-y-0">
         {items}
+      </div>
+      <div className="flex justify-center my-16">
+        <Button
+          component="a"
+          href="#"
+          variant="outline"
+          leftIcon={<ExternalLink size={14} />}
+        >
+          View all Events
+        </Button>
       </div>
     </div>
   );

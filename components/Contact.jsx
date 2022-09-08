@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types";
 import {
   Paper,
   Text,
@@ -8,7 +9,9 @@ import {
   Group,
   SimpleGrid,
   createStyles,
+  Tabs,
 } from "@mantine/core";
+import { BuildingChurch } from "tabler-icons-react";
 import { ContactIconsList } from "./utils/ContactIcons";
 import bg from "../public/images/bg.svg";
 
@@ -105,11 +108,51 @@ const useStyles = createStyles((theme) => {
   };
 });
 
-export default function ContactUs() {
+const contacts = {
+  la: {
+    email: "churchbrim@gmail.com",
+    phone: "+233 244 822 474",
+    address: "GL-567-1923, South-La, Accra",
+    hours: "Mon-Sun, 8am - 6pm",
+  },
+  uk: {
+    email: "churchbrim@gmail.com",
+    phone: "+447 342 970 392",
+    address:
+      "Arch 461 Station Passage,Red Gate \nLoughborough Junction Station, SW9 8SA",
+    hours: "Mon-Sun, 8am - 6pm",
+  },
+  dom: {
+    email: "churchbrim@gmail.com",
+    phone: "+233 244 822 474",
+    address: "GL-567-1923, Domeabra",
+    hours: "Mon-Sun, 8am - 6pm",
+  },
+  kof: {
+    email: "churchbrim@gmail.com",
+    phone: "+233 244 822 474",
+    address: "GL-567-1923, Koforidua",
+    hours: "Mon-Sun, 8am - 6pm",
+  },
+  bom: {
+    email: "churchbrim@gmail.com",
+    phone: "+233 244 822 474",
+    address: "Bomponso, East Ghana",
+    hours: "Mon-Sun, 8am - 6pm",
+  },
+  bud: {
+    email: "churchbrim@gmail.com",
+    phone: "+233 244 822 474",
+    address: "Budumburam, Cape Coast",
+    hours: "Mon-Sun, 8am - 6pm",
+  },
+};
+
+function Content({ list }) {
   const { classes } = useStyles();
 
   return (
-    <Paper shadow="md" radius="lg">
+    <Paper shadow="md" radius="lg" className=" lg:max-w-[70%] mx-auto mt-10">
       <div className={classes.wrapper}>
         <div className={classes.contacts}>
           <Text
@@ -121,7 +164,7 @@ export default function ContactUs() {
             Contact information
           </Text>
 
-          <ContactIconsList variant="white" />
+          <ContactIconsList variant="white" data={list} />
         </div>
 
         <form
@@ -129,7 +172,7 @@ export default function ContactUs() {
           onSubmit={(event) => event.preventDefault()}
         >
           <Text size="lg" weight={700} className={classes.title}>
-            Need Our Services? Get in touch
+            Welcome, we want to know you 😊
           </Text>
 
           <div className={classes.fields}>
@@ -151,7 +194,7 @@ export default function ContactUs() {
               minRows={3}
             />
 
-            <Group position="right" mt="md">
+            <Group position="right" className="mt-12">
               <Button type="submit" className="bg-primary w-full">
                 Send message
               </Button>
@@ -160,5 +203,55 @@ export default function ContactUs() {
         </form>
       </div>
     </Paper>
+  );
+}
+
+Content.propTypes = {
+  list: PropTypes.shape.isRequired,
+};
+
+export default function ContactUs() {
+  return (
+    <Tabs defaultValue="la">
+      <Tabs.List className="w-screen overflow-x-auto scrollbar-hide py-3 flex justify-start lg:justify-evenly">
+        <Tabs.Tab value="la" icon={<BuildingChurch size={14} />}>
+          BRIM, La (HQ)
+        </Tabs.Tab>
+        <Tabs.Tab value="uk" icon={<BuildingChurch size={14} />}>
+          Prayer Palace, UK
+        </Tabs.Tab>
+        <Tabs.Tab value="dom" icon={<BuildingChurch size={14} />}>
+          BRIM, Domeabra
+        </Tabs.Tab>
+        <Tabs.Tab value="kof" icon={<BuildingChurch size={14} />}>
+          BRIM, Koforidua
+        </Tabs.Tab>
+        <Tabs.Tab value="bom" icon={<BuildingChurch size={14} />}>
+          BRIM, Bomponso
+        </Tabs.Tab>
+        <Tabs.Tab value="bud" icon={<BuildingChurch size={14} />}>
+          BRIM, Budumburam
+        </Tabs.Tab>
+      </Tabs.List>
+
+      <Tabs.Panel value="la" pt="xs">
+        <Content list={contacts.la} />
+      </Tabs.Panel>
+      <Tabs.Panel value="uk" pt="xs">
+        <Content list={contacts.uk} />
+      </Tabs.Panel>
+      <Tabs.Panel value="dom" pt="xs">
+        <Content list={contacts.dom} />
+      </Tabs.Panel>
+      <Tabs.Panel value="kof" pt="xs">
+        <Content list={contacts.kof} />
+      </Tabs.Panel>
+      <Tabs.Panel value="bom" pt="xs">
+        <Content list={contacts.bom} />
+      </Tabs.Panel>
+      <Tabs.Panel value="bud" pt="xs">
+        <Content list={contacts.bud} />
+      </Tabs.Panel>
+    </Tabs>
   );
 }

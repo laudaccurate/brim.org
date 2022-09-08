@@ -1,5 +1,6 @@
 /* eslint-disable react/prop-types */
 import React from "react";
+import PropTypes from "prop-types";
 import {
   createStyles,
   ThemeIcon,
@@ -71,19 +72,23 @@ function ContactIcon({
   );
 }
 
-const MOCKDATA = [
-  { title: "Email", description: "quickfixofficina@gmail.com", icon: At },
-  {
-    title: "Phone",
-    description: "+233 (54) 916 2277   |     +233 (20) 125 2464",
-    icon: Phone,
-  },
-  { title: "Address", description: "Tema Comm 11 & East Legon", icon: MapPin },
-  { title: "Working hours", description: "9 a.m. – 8:30 p.m.", icon: Sun },
-];
+export function ContactIconsList({ data, variant }) {
+  const MOCKDATA = [
+    { title: "Email", description: data.email, icon: At },
+    {
+      title: "Phone",
+      description: data.phone,
+      icon: Phone,
+    },
+    {
+      title: "Address",
+      description: data.address,
+      icon: MapPin,
+    },
+    { title: "Working hours", description: data.hours, icon: Sun },
+  ];
 
-export function ContactIconsList({ data = MOCKDATA, variant }) {
-  const items = data.map((item) => (
+  const items = MOCKDATA.map((item) => (
     <ContactIcon key={item.title} variant={variant} {...item} />
   ));
   return <Group direction="column">{items}</Group>;
@@ -116,3 +121,7 @@ export function ContactIcons() {
     </SimpleGrid>
   );
 }
+
+ContactIconsList.propTypes = {
+  data: PropTypes.shape.isRequired,
+};

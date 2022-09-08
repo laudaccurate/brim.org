@@ -65,7 +65,7 @@ function MinistryCard({ image, title, description, tag }) {
       className="lg:min-w-[23%] min-w-[92%]"
     >
       <Card.Section>
-        <Image src={image} height={160} alt="Norway" />
+        <Image src={image} height={160} alt="Norway" withPlaceholder />
       </Card.Section>
 
       <Group position="apart" mt="md" mb="xs">
@@ -82,7 +82,7 @@ function MinistryCard({ image, title, description, tag }) {
       <Card.Section inheritPadding mt="sm" pb="md">
         <SimpleGrid cols={3}>
           {images.map((img) => (
-            <Image src={img} key={img} radius="sm" />
+            <Image src={img} key={img} radius="sm" withPlaceholder />
           ))}
         </SimpleGrid>
       </Card.Section>

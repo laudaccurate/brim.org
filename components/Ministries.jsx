@@ -13,24 +13,21 @@ import {
 
 const ministries = [
   {
-    image:
-      "https://images.unsplash.com/photo-1527004013197-933c4bb611b3?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=720&q=80",
+    image: "./images/men_1.webp",
     title: "Men's Ministry",
-    tag: "BRIM, LA",
+    tag: "BRIM, Favor Land",
     description:
       "MEN!!!, STRENGTH FOR THE LORD.... That's what we say and represent, lifting up Holy hands to Fod in prayer always, and availing ourselves for ministry.",
   },
   {
-    image:
-      "https://images.unsplash.com/photo-1527004013197-933c4bb611b3?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=720&q=80",
+    image: "./images/choir_2.webp",
     title: "Women's Ministry",
     tag: "Prayer Palace, UK",
     description:
       "WOMEN !!!, Let you light shine... Yes, we shine the Light of Christ always through humility ,reasonable service and Godly examples. This is our ministry.",
   },
   {
-    image:
-      "https://images.unsplash.com/photo-1527004013197-933c4bb611b3?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=720&q=80",
+    image: "./images/choir_3.webp",
     title: "Youth Ministry",
     tag: "BRIM, LA",
     description:
@@ -44,9 +41,9 @@ const ministries = [
       "We are Children of The Lord and we sing HALLELUJAH always, for ours is the Kingdom of God. Due to this, we live in Godly love, obedience and humility.",
   },
   {
-    image: "./images/banner-4.webp",
-    title: "Children's Ministry",
-    tag: "Prayer Palace, UK",
+    image: "./images/choir_1.webp",
+    title: "BRIM Choir",
+    tag: "Prayer Palace, LA",
     description:
       "We are Children of The Lord and we sing HALLELUJAH always, for ours is the Kingdom of God. Due to this, we live in Godly love, obedience and humility.",
   },

@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 import React from "react";
 import {
   createStyles,
@@ -82,8 +83,8 @@ const MOCKDATA = [
 ];
 
 export function ContactIconsList({ data = MOCKDATA, variant }) {
-  const items = data.map((item, index) => (
-    <ContactIcon key={index} variant={variant} {...item} />
+  const items = data.map((item) => (
+    <ContactIcon key={item.title} variant={variant} {...item} />
   ));
   return <Group direction="column">{items}</Group>;
 }

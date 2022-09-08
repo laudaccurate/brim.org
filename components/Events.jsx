@@ -9,7 +9,7 @@ import {
   Title,
   Button,
 } from "@mantine/core";
-import { CalendarEvent, MapPin, ExternalLink } from "tabler-icons-react";
+import { IconCalendarEvent, IconMapPin, IconExternalLink } from "@tabler/icons";
 
 const useStyles = createStyles((theme) => ({
   card: {
@@ -67,7 +67,7 @@ function EventCard({ image, category, title, date, venue }) {
           </Text>
           <Group noWrap spacing="xs">
             <Group spacing="xs" noWrap>
-              <MapPin size={15} className="text-gray-500" />
+              <IconMapPin size={15} className="text-gray-500" />
               <Text size="xs" color="dimmed" className="maxli">
                 {venue}
               </Text>
@@ -76,7 +76,7 @@ function EventCard({ image, category, title, date, venue }) {
               {/* • */}|
             </Text>
             <Group spacing="xs" noWrap>
-              <CalendarEvent size={15} className="text-gray-500" />
+              <IconCalendarEvent size={15} className="text-gray-500" />
               <Text size="xs" color="dimmed">
                 {date}
               </Text>
@@ -114,7 +114,7 @@ export default function Events() {
           component="a"
           href="#"
           variant="outline"
-          leftIcon={<ExternalLink size={14} />}
+          leftIcon={<IconExternalLink size={14} />}
         >
           View all Events
         </Button>

@@ -8,11 +8,11 @@ import {
   Group,
 } from "@mantine/core";
 import {
-  BrandTwitter,
-  BrandYoutube,
-  BrandInstagram,
-  BrandFacebook,
-} from "tabler-icons-react";
+  IconBrandTwitter,
+  IconBrandYoutube,
+  IconBrandInstagram,
+  IconBrandFacebook,
+} from "@tabler/icons";
 import Logo from "../public/images/brim_logo.png";
 
 const useStyles = createStyles((theme) => ({
@@ -224,16 +224,16 @@ export default function FooterLinks() {
 
         <Group spacing={0} className={classes.social} position="right" noWrap>
           <ActionIcon size="lg">
-            <BrandFacebook size={18} />
+            <IconBrandFacebook size={18} />
           </ActionIcon>
           <ActionIcon size="lg">
-            <BrandTwitter size={18} />
+            <IconBrandTwitter size={18} />
           </ActionIcon>
           <ActionIcon size="lg">
-            <BrandInstagram size={18} />
+            <IconBrandInstagram size={18} />
           </ActionIcon>
           <ActionIcon size="lg">
-            <BrandYoutube size={18} />
+            <IconBrandYoutube size={18} />
           </ActionIcon>
         </Group>
       </Container>

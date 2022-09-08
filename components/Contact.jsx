@@ -11,7 +11,7 @@ import {
   createStyles,
   Tabs,
 } from "@mantine/core";
-import { BuildingChurch } from "tabler-icons-react";
+import { IconBuildingChurch } from "@tabler/icons";
 import { ContactIconsList } from "./utils/ContactIcons";
 import bg from "../public/images/bg.svg";
 
@@ -214,22 +214,22 @@ export default function ContactUs() {
   return (
     <Tabs defaultValue="la">
       <Tabs.List className="w-screen overflow-x-auto scrollbar-hide py-3 flex justify-start lg:justify-evenly">
-        <Tabs.Tab value="la" icon={<BuildingChurch size={14} />}>
+        <Tabs.Tab value="la" icon={<IconBuildingChurch size={14} />}>
           BRIM, La (HQ)
         </Tabs.Tab>
-        <Tabs.Tab value="uk" icon={<BuildingChurch size={14} />}>
+        <Tabs.Tab value="uk" icon={<IconBuildingChurch size={14} />}>
           Prayer Palace, UK
         </Tabs.Tab>
-        <Tabs.Tab value="dom" icon={<BuildingChurch size={14} />}>
+        <Tabs.Tab value="dom" icon={<IconBuildingChurch size={14} />}>
           BRIM, Domeabra
         </Tabs.Tab>
-        <Tabs.Tab value="kof" icon={<BuildingChurch size={14} />}>
+        <Tabs.Tab value="kof" icon={<IconBuildingChurch size={14} />}>
           BRIM, Koforidua
         </Tabs.Tab>
-        <Tabs.Tab value="bom" icon={<BuildingChurch size={14} />}>
+        <Tabs.Tab value="bom" icon={<IconBuildingChurch size={14} />}>
           BRIM, Bomponso
         </Tabs.Tab>
-        <Tabs.Tab value="bud" icon={<BuildingChurch size={14} />}>
+        <Tabs.Tab value="bud" icon={<IconBuildingChurch size={14} />}>
           BRIM, Budumburam
         </Tabs.Tab>
       </Tabs.List>

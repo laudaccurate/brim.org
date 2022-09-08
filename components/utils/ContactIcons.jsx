@@ -9,7 +9,7 @@ import {
   SimpleGrid,
   Box,
 } from "@mantine/core";
-import { Sun, Phone, MapPin, At } from "tabler-icons-react";
+import { IconSun, IconPhone, IconMapPin, IconAt } from "@tabler/icons";
 
 const useStyles = createStyles((theme, { variant }) => ({
   wrapper: {
@@ -74,18 +74,18 @@ function ContactIcon({
 
 export function ContactIconsList({ data, variant }) {
   const MOCKDATA = [
-    { title: "Email", description: data.email, icon: At },
+    { title: "Email", description: data.email, icon: IconAt },
     {
       title: "Phone",
       description: data.phone,
-      icon: Phone,
+      icon: IconPhone,
     },
     {
       title: "Address",
       description: data.address,
-      icon: MapPin,
+      icon: IconMapPin,
     },
-    { title: "Working hours", description: data.hours, icon: Sun },
+    { title: "Working hours", description: data.hours, icon: IconSun },
   ];
 
   const items = MOCKDATA.map((item) => (

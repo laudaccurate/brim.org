@@ -8,12 +8,12 @@ import {
   // Container,
 } from "@mantine/core";
 import {
-  Books,
-  BuildingChurch,
-  Home,
-  MailForward,
-  Users,
-} from "tabler-icons-react";
+  IconBooks,
+  IconBuildingChurch,
+  IconHome,
+  IconMailForward,
+  IconUsers,
+} from "@tabler/icons";
 import { useDisclosure } from "@mantine/hooks";
 import Image from "next/image";
 import Link from "next/link";
@@ -45,28 +45,28 @@ const links = [
   {
     link: "/",
     label: "Home",
-    icon: <Home size={18} className="mt-[2px]" />,
+    icon: <IconHome size={18} className="mt-[2px]" />,
   },
 
   {
     link: "/about-brim",
     label: "About",
-    icon: <BuildingChurch size={18} className="mt-[2px]" />,
+    icon: <IconBuildingChurch size={18} className="mt-[2px]" />,
   },
   {
     link: "/ministries",
     label: "Ministries",
-    icon: <Users size={16} className="mt-[2px]" />,
+    icon: <IconUsers size={16} className="mt-[2px]" />,
   },
   {
     link: "/library",
     label: "Library",
-    icon: <Books size={16} className="mt-[2px]" />,
+    icon: <IconBooks size={16} className="mt-[2px]" />,
   },
   {
     link: "/contact",
     label: "Contact",
-    icon: <MailForward size={16} className="mt-[2px]" />,
+    icon: <IconMailForward size={16} className="mt-[2px]" />,
   },
 ];
 

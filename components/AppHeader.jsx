@@ -49,7 +49,7 @@ const links = [
   },
 
   {
-    link: "/about",
+    link: "/about-brim",
     label: "About",
     icon: <BuildingChurch size={18} className="mt-[2px]" />,
   },

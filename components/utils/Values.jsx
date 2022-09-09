@@ -24,50 +24,50 @@ export const MOCKDATA = [
     icon: IconBrandTwitter,
     title: "The Holy Spirit",
     description:
-      "This dust is actually a powerful poison that will even make a pro wrestler sick, Regice cloaks itself with frigid air of -328 degrees Fahrenheit",
+      "It is our core mission to follow the leading of the Holy Spirit to guide us into all Truth, and to reveal the mysteries of God unto us",
   },
   {
     icon: IconBible,
     title: "The Word",
     description:
-      "People say it can run at the same speed as lightning striking, Its icy body is so cold, it will not melt even if it is immersed in magma",
+      "We hold fast with obedience (without wresting) to God's Word of patient endurance, till we have attained all the promises therein.",
   },
   {
     icon: IconPray,
     title: "Prayer",
     description:
-      "They’re popular, but they’re rare. Trainers who show them off recklessly may be targeted by thieves",
+      "Prayer is the master key. We follow our Saviour's example in prayer, as our only potent weapon for battling the present evil.",
   },
   {
     icon: IconHeart,
     title: "Love",
     description:
-      "Although it still can’t fly, its jumping power is outstanding, in Alola the mushrooms on Paras don’t grow up quite right",
+      "We love because He first loved us. We are imitators of Christ in love; the love of Christ rules in our hearts as His dearly beloved.",
   },
   {
     icon: IconUsers,
     title: "Soul Winning",
     description:
-      "Rapidash usually can be seen casually cantering in the fields and plains, Skitty is known to chase around after its own tail",
+      "As God's redeemed people, we are passionate about availing ourselves unto God as instruments to make disciples of all nations.",
   },
   {
     icon: IconBuildingCastle,
     title: "Heaven",
     description:
-      "They’re popular, but they’re rare. Trainers who show them off recklessly may be targeted by thieves",
+      "Our citizenship is in Heaven. We eagerly look forward to that eternal city with foundations, prepared for us to reign in forever.",
   },
 ];
 
 const desc = {
   title: "What we believe in",
   description:
-    "Every once in a while, you’ll see a Golbat that’s missing some fangs. This happens when hunger drives it to try biting a Steel-type Pokémon.",
+    "BRIM is God's own church. Everything we do as a church is guided and inspired by these. God established and upholds His church on these.",
 };
 
 export function Values({ icon: Icon, title, description }) {
   const theme = useMantineTheme();
   return (
-    <div>
+    <div className="flex flex-col justify-center items-center">
       <ThemeIcon
         variant="light"
         size={40}
@@ -79,7 +79,12 @@ export function Values({ icon: Icon, title, description }) {
       <Text style={{ marginTop: theme.spacing.sm, marginBottom: 7 }}>
         {title}
       </Text>
-      <Text size="sm" color="dimmed" style={{ lineHeight: 1.6 }}>
+      <Text
+        size="sm"
+        color="dimmed"
+        style={{ lineHeight: 1.6 }}
+        className="text-center"
+      >
         {description}
       </Text>
     </div>
@@ -113,7 +118,7 @@ export function ValuesGrid({ data = MOCKDATA }) {
       <Title className="font-medium text-center mb-4">{desc.title}</Title>
 
       <Container size={560} p={0}>
-        <Text size="sm" className="text-center">
+        <Text size="sm" className="text-center text-gray-500">
           {desc.description}
         </Text>
       </Container>
